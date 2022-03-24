@@ -1,0 +1,184 @@
+@import url(./_grid.css);
+@font-face {
+  font-family: "mikhak";
+  src: url(/assets/font/Mikhak/Mikhak-Articgroup-ir/mikhak/Mikhak-Black.ttf)
+      format(ttf),
+    url(/assets/font/Mikhak/Mikhak-Articgroup-ir/mikhak/Mikhak-Bold.ttf)
+      format(ttf),
+    url(/assets/font/Mikhak/Mikhak-Articgroup-ir/mikhak/Mikhak-Light.ttf)
+      format(ttf),
+    url(/assets/font/Mikhak/Mikhak-Articgroup-ir/mikhak/Mikhak-Medium.ttf)
+      format(ttf),
+    url(/assets/font/Mikhak/Mikhak-Articgroup-ir/mikhak/Mikhak-Thin.ttf)
+      format(ttf),
+    url(/assets/font/Mikhak/Mikhak-Articgroup-ir/mikhak/Mikhak-VF.ttf)
+      format(ttf);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+@media only screen and (max-width: 813px) {
+  .left-side {
+    display: none;
+  }
+}
+.container form {
+  display: flex;
+  justify-content: center;
+  margin: 60px 50px;
+  align-items: center;
+  flex-direction: row-reverse;
+  box-shadow: 0px 0px 3px 1px rgb(221 221 221 / 88%);
+}
+.right-side {
+  max-height: 100vh;
+  padding: 0 20px;
+}
+.right-side .from-title h2 {
+  text-align: center;
+  font-size: 17px;
+  border-bottom: 1px solid #cdcdcda3;
+  margin-bottom: 22px;
+  padding: 22px 0;
+  color: #0081f5;
+}
+.right-side .input-groups {
+  margin: 10px;
+}
+.right-side .input-groups .input-container {
+  float: right;
+  padding: 0 5px;
+  margin: 5px auto;
+}
+.right-side .input-groups .input-container input {
+  border: none;
+  position: relative;
+  width: 100%;
+  outline: none;
+  padding-right: 10px;
+  color: #494848;
+}
+
+.right-side .input-groups .full {
+  width: 100%;
+}
+.right-side .input-groups .half {
+  width: 50%;
+}
+
+.right-side .input-groups .input-container label {
+  position: relative;
+  top: -50px;
+  padding-right: 20px;
+  cursor: text;
+  color: #888787;
+  transition: 0.5s;
+  font-size: 13px;
+}
+.right-side .input-groups .input-container label > span {
+  font-size: 12px;
+  color: #979797;
+}
+.right-side .input-groups .input-container input:placeholder-shown ~ label,
+.right-side .input-groups .input-container:nth-child(5) label {
+  padding-right: 10px;
+  top: -27px;
+  color: #606060;
+  transition: 0.5s;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 440px) {
+  .right-side .input-groups .input-container {
+    width: 100% !important;
+  }
+}
+.input-groups .input-container span.bar {
+  width: 100%;
+  background-color: rgba(0, 132, 255, 0.342);
+  position: absolute;
+  height: 1px;
+  right: 0;
+  bottom: 23px;
+}
+.input-groups .input-container span.bar::after,
+.input-groups .input-container span.bar::before {
+  content: "";
+  position: absolute;
+  height: 0.9px;
+  width: 0;
+  bottom: 0;
+  right: 0;
+}
+.input-groups .input-container span.bar::after {
+  left: 50%;
+  transition: 0.5s;
+}
+.input-groups .input-container span.bar::before {
+  right: 50%;
+  transition: 0.5s;
+}
+.input-groups .input-container input:focus ~ span.bar::before {
+  width: 100%;
+  transition: 0.5s;
+  right: 0;
+}
+
+.input-groups .input-container input:valid ~ .bar::after,
+.input-groups .input-container input:valid ~ .bar::before {
+  background-color: green;
+}
+.input-groups .input-container input:invalid ~ .bar::after,
+.input-groups .input-container input:invalid ~ .bar::before {
+  background-color: red;
+}
+.input-groups .input-container input:focus {
+  border-bottom: none;
+}
+.input-groups button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 19px;
+  border-radius: 28px;
+  border: 1px solid black;
+  border: none;
+  font-weight: bold;
+  transition: 0.5s;
+  color: #0081f5;
+}
+.input-groups button:hover {
+  color: #efefef;
+  padding: 5px 39px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #0081f5;
+  box-shadow: 0px 0px 3px 1px #434343;
+}
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.form-footer > a {
+  color: #0081f5;
+  font-size: 15px;
+  padding-right: 0;
+  margin-right: 0;
+}
+.social-register i {
+  font-size: 20px;
+  border: 1px solid #b7b7b7;
+  padding: 2px;
+  border-radius: 26px;
+  background-color: #0081f5;
+  color: #efefef;
+  transition: 0.5s;
+}
+.social-register a:hover i {
+  color: #0081f5;
+  background-color: #efefef;
+  transition: 0.5s;
+}
